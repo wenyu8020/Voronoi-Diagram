@@ -1,0 +1,2133 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=big5">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 15">
+<meta name=Originator content="Microsoft Word 15">
+<link rel=File-List href="Voronoi%20Diagram.files/filelist.xml">
+<link rel=Preview href="Voronoi%20Diagram.files/preview.wmf">
+<link rel=Edit-Time-Data href="Voronoi%20Diagram.files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>Voronoi Diagram</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>±i¯¾·ì</o:Author>
+  <o:LastAuthor>±i¯¾·ì</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>8</o:TotalTime>
+  <o:Created>2023-12-05T18:17:00Z</o:Created>
+  <o:LastSaved>2023-12-05T18:17:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>411</o:Words>
+  <o:Characters>2346</o:Characters>
+  <o:Lines>19</o:Lines>
+  <o:Paragraphs>5</o:Paragraphs>
+  <o:CharactersWithSpaces>2752</o:CharactersWithSpaces>
+  <o:Version>16.00</o:Version>
+ </o:DocumentProperties>
+ <o:OfficeDocumentSettings>
+  <o:AllowPNG/>
+ </o:OfficeDocumentSettings>
+</xml><![endif]-->
+<link rel=dataStoreItem href="Voronoi%20Diagram.files/item0001.xml"
+target="Voronoi%20Diagram.files/props002.xml">
+<link rel=themeData href="Voronoi%20Diagram.files/themedata.thmx">
+<link rel=colorSchemeMapping
+href="Voronoi%20Diagram.files/colorschememapping.xml">
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:TrackMoves>false</w:TrackMoves>
+  <w:TrackFormatting/>
+  <w:PunctuationKerning/>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>2</w:DisplayVerticalDrawingGridEvery>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>ZH-TW</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:SpaceForUL/>
+   <w:BalanceSingleByteDoubleByteWidth/>
+   <w:DoNotLeaveBackslashAlone/>
+   <w:ULTrailSpace/>
+   <w:DoNotExpandShiftReturn/>
+   <w:AdjustLineHeightInTable/>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:EnableOpenTypeKerning/>
+   <w:DontFlipMirrorIndents/>
+   <w:OverrideTableStyleHps/>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="false"
+  DefSemiHidden="false" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="376">
+  <w:LsdException Locked="false" Priority="0" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 9"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 9"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal Indent"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footnote text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="header"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footer"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index heading"/>
+  <w:LsdException Locked="false" Priority="35" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="table of figures"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="envelope address"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="envelope return"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footnote reference"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation reference"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="line number"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="page number"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="endnote reference"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="endnote text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="table of authorities"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="macro"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="toa heading"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 5"/>
+  <w:LsdException Locked="false" Priority="10" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Closing"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Signature"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="true"
+   UnhideWhenUsed="true" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Message Header"/>
+  <w:LsdException Locked="false" Priority="11" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Salutation"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Date"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text First Indent"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text First Indent 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Note Heading"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Block Text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Hyperlink"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="FollowedHyperlink"/>
+  <w:LsdException Locked="false" Priority="22" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Document Map"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Plain Text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="E-mail Signature"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Top of Form"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Bottom of Form"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal (Web)"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Acronym"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Address"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Cite"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Code"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Definition"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Keyboard"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Preformatted"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Sample"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Typewriter"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Variable"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal Table"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation subject"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="No List"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Contemporary"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Elegant"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Professional"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Subtle 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Subtle 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Balloon Text"/>
+  <w:LsdException Locked="false" Priority="39" Name="Table Grid"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Theme"/>
+  <w:LsdException Locked="false" SemiHidden="true" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" QFormat="true"
+   Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" QFormat="true"
+   Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" QFormat="true"
+   Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" QFormat="true"
+   Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" QFormat="true"
+   Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" QFormat="true"
+   Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" SemiHidden="true"
+   UnhideWhenUsed="true" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="TOC Heading"/>
+  <w:LsdException Locked="false" Priority="41" Name="Plain Table 1"/>
+  <w:LsdException Locked="false" Priority="42" Name="Plain Table 2"/>
+  <w:LsdException Locked="false" Priority="43" Name="Plain Table 3"/>
+  <w:LsdException Locked="false" Priority="44" Name="Plain Table 4"/>
+  <w:LsdException Locked="false" Priority="45" Name="Plain Table 5"/>
+  <w:LsdException Locked="false" Priority="40" Name="Grid Table Light"/>
+  <w:LsdException Locked="false" Priority="46" Name="Grid Table 1 Light"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark"/>
+  <w:LsdException Locked="false" Priority="51" Name="Grid Table 6 Colorful"/>
+  <w:LsdException Locked="false" Priority="52" Name="Grid Table 7 Colorful"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 1"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 1"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 1"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 2"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 2"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 2"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 3"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 3"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 3"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 4"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 4"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 5"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 5"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 5"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 6"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 6"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 6"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 6"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 6"/>
+  <w:LsdException Locked="false" Priority="46" Name="List Table 1 Light"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark"/>
+  <w:LsdException Locked="false" Priority="51" Name="List Table 6 Colorful"/>
+  <w:LsdException Locked="false" Priority="52" Name="List Table 7 Colorful"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 1"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 1"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 1"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 2"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 2"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 2"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 3"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 3"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 3"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 4"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 4"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 5"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 5"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 5"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 6"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 6"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 6"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 6"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Mention"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Smart Hyperlink"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Hashtag"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Unresolved Mention"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Smart Link"/>
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:·s²Ó©úÅé;
+	panose-1:2 2 5 0 0 0 0 0 0 0;
+	mso-font-alt:PMingLiU;
+	mso-font-charset:136;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-1610611969 684719354 22 0 1048577 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:3 0 0 0 1 0;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-469750017 -1040178053 9 0 511 0;}
+@font-face
+	{font-family:·L³n¥¿¶ÂÅé;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:136;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:679 684672000 22 0 1048585 0;}
+@font-face
+	{font-family:"\@·L³n¥¿¶ÂÅé";
+	mso-font-charset:136;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:679 684672000 22 0 1048585 0;}
+@font-face
+	{font-family:"\@·s²Ó©úÅé";
+	panose-1:2 1 6 1 0 1 1 1 1 1;
+	mso-font-charset:136;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-1610611969 684719354 22 0 1048577 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0cm;
+	mso-pagination:none;
+	font-size:12.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:·s²Ó©úÅé;
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-font-kerning:1.0pt;}
+p.MsoClosing, li.MsoClosing, div.MsoClosing
+	{mso-style-priority:99;
+	mso-style-link:"µ²»y ¦r¤¸";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:5.0pt;
+	mso-para-margin-top:0cm;
+	mso-para-margin-right:0cm;
+	mso-para-margin-bottom:0cm;
+	mso-para-margin-left:18.0gd;
+	mso-pagination:none;
+	font-size:26.0pt;
+	font-family:"·L³n¥¿¶ÂÅé",sans-serif;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-font-kerning:1.0pt;}
+p.MsoNoteHeading, li.MsoNoteHeading, div.MsoNoteHeading
+	{mso-style-priority:99;
+	mso-style-link:"µùÄÀ¼ÐÃD ¦r¤¸";
+	mso-style-next:¤º¤å;
+	margin:0cm;
+	text-align:center;
+	mso-pagination:none;
+	font-size:26.0pt;
+	font-family:"·L³n¥¿¶ÂÅé",sans-serif;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-font-kerning:1.0pt;}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:#0563C1;
+	mso-themecolor:hyperlink;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:#954F72;
+	mso-themecolor:followedhyperlink;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:24.0pt;
+	mso-para-margin-top:0cm;
+	mso-para-margin-right:0cm;
+	mso-para-margin-bottom:0cm;
+	mso-para-margin-left:2.0gd;
+	mso-pagination:none;
+	font-size:12.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:·s²Ó©úÅé;
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-font-kerning:1.0pt;}
+span.a
+	{mso-style-name:"µùÄÀ¼ÐÃD ¦r¤¸";
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:µùÄÀ¼ÐÃD;
+	mso-ansi-font-size:26.0pt;
+	mso-bidi-font-size:26.0pt;
+	font-family:"·L³n¥¿¶ÂÅé",sans-serif;
+	mso-ascii-font-family:·L³n¥¿¶ÂÅé;
+	mso-fareast-font-family:·L³n¥¿¶ÂÅé;
+	mso-hansi-font-family:·L³n¥¿¶ÂÅé;}
+span.a0
+	{mso-style-name:"µ²»y ¦r¤¸";
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:µ²»y;
+	mso-ansi-font-size:26.0pt;
+	mso-bidi-font-size:26.0pt;
+	font-family:"·L³n¥¿¶ÂÅé",sans-serif;
+	mso-ascii-font-family:·L³n¥¿¶ÂÅé;
+	mso-fareast-font-family:·L³n¥¿¶ÂÅé;
+	mso-hansi-font-family:·L³n¥¿¶ÂÅé;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-family:"Calibri",sans-serif;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+ /* Page Definitions */
+ @page
+	{mso-page-border-surround-header:no;
+	mso-page-border-surround-footer:no;}
+@page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+	mso-header-margin:42.55pt;
+	mso-footer-margin:49.6pt;
+	mso-paper-source:0;
+	layout-grid:18.0pt;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:195195671;
+	mso-list-type:hybrid;
+	mso-list-template-ids:272824222 -1795114982 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:„P;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:24.0pt;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+@list l0:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:ƒÞ;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:48.0pt;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+@list l0:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:ƒå;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:72.0pt;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+@list l0:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:ƒÜ;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:96.0pt;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+@list l0:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:ƒÞ;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:120.0pt;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+@list l0:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:ƒå;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:144.0pt;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+@list l0:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:ƒÜ;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:168.0pt;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+@list l0:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:ƒÞ;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:192.0pt;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+@list l0:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:ƒå;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:216.0pt;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+@list l1
+	{mso-list-id:491484974;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-40492120 1906189040 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:w;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:24.0pt;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+@list l1:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:ƒÞ;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:48.0pt;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+@list l1:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:ƒå;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:72.0pt;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+@list l1:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:ƒÜ;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:96.0pt;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+@list l1:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:ƒÞ;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:120.0pt;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+@list l1:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:ƒå;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:144.0pt;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+@list l1:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:ƒÜ;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:168.0pt;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+@list l1:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:ƒÞ;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:192.0pt;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+@list l1:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:ƒå;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:216.0pt;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+@list l2
+	{mso-list-id:868375217;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-423957398 -1795114982 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l2:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:„P;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:48.0pt;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+@list l2:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:ƒÞ;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+@list l2:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:ƒå;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:96.0pt;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+@list l2:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:ƒÜ;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:120.0pt;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+@list l2:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:ƒÞ;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:144.0pt;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+@list l2:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:ƒå;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:168.0pt;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+@list l2:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:ƒÜ;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:192.0pt;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+@list l2:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:ƒÞ;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:216.0pt;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+@list l2:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:ƒå;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:240.0pt;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+@list l3
+	{mso-list-id:1048065383;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-676331154 -1795114982 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l3:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:„P;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:24.0pt;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+@list l3:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:ƒÞ;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:48.0pt;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+@list l3:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:ƒå;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:72.0pt;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+@list l3:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:ƒÜ;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:96.0pt;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+@list l3:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:ƒÞ;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:120.0pt;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+@list l3:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:ƒå;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:144.0pt;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+@list l3:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:ƒÜ;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:168.0pt;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+@list l3:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:ƒÞ;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:192.0pt;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+@list l3:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:ƒå;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:216.0pt;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+@list l4
+	{mso-list-id:1109473633;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-433654150 218270590 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l4:level1
+	{mso-level-number-format:decimal-enclosed-circle;
+	mso-level-text:%1;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:48.0pt;
+	text-indent:-24.0pt;}
+@list l4:level2
+	{mso-level-number-format:ideograph-traditional;
+	mso-level-text:%2¡B;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-24.0pt;}
+@list l4:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	margin-left:96.0pt;
+	text-indent:-24.0pt;}
+@list l4:level4
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:120.0pt;
+	text-indent:-24.0pt;}
+@list l4:level5
+	{mso-level-number-format:ideograph-traditional;
+	mso-level-text:%5¡B;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:144.0pt;
+	text-indent:-24.0pt;}
+@list l4:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	margin-left:168.0pt;
+	text-indent:-24.0pt;}
+@list l4:level7
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:192.0pt;
+	text-indent:-24.0pt;}
+@list l4:level8
+	{mso-level-number-format:ideograph-traditional;
+	mso-level-text:%8¡B;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:216.0pt;
+	text-indent:-24.0pt;}
+@list l4:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	margin-left:240.0pt;
+	text-indent:-24.0pt;}
+@list l5
+	{mso-list-id:1569337618;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1575545310 1906189040 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l5:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:w;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:48.0pt;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+@list l5:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:ƒÞ;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+@list l5:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:ƒå;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:96.0pt;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+@list l5:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:ƒÜ;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:120.0pt;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+@list l5:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:ƒÞ;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:144.0pt;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+@list l5:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:ƒå;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:168.0pt;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+@list l5:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:ƒÜ;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:192.0pt;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+@list l5:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:ƒÞ;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:216.0pt;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+@list l5:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:ƒå;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:240.0pt;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+@list l6
+	{mso-list-id:1868132289;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1680012112 1906189040 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l6:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:w;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:24.0pt;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+@list l6:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:ƒÞ;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:48.0pt;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+@list l6:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:ƒå;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:72.0pt;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+@list l6:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:ƒÜ;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:96.0pt;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+@list l6:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:ƒÞ;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:120.0pt;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+@list l6:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:ƒå;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:144.0pt;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+@list l6:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:ƒÜ;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:168.0pt;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+@list l6:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:ƒÞ;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:192.0pt;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+@list l6:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:ƒå;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:216.0pt;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:ªí®æ¤º¤å;
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-font-kerning:1.0pt;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="1027"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=ZH-TW link="#0563C1" vlink="#954F72" style='tab-interval:24.0pt;
+word-wrap:break-word;text-justify-trim:punctuation'>
+
+<div class=WordSection1 style='layout-grid:18.0pt'>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><span
+lang=EN-US style='font-size:36.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>Voronoi
+Diagram<o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><span
+class=GramE><span style='font-size:22.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>¸ê¤uºÓ</span></span><span
+style='font-size:22.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>¤@ <span
+class=GramE>±i¯¾·ì</span><span lang=EN-US> M123040016<o:p></o:p></span></span></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><span
+lang=EN-US style='font-size:26.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><span
+lang=EN-US style='font-size:26.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='line-height:150%'><b><span style='font-size:26.0pt;
+line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>³nÅé³W®æ®Ñ<span lang=EN-US><o:p></o:p></span></span></b></p>
+
+<p class=MsoNormal style='line-height:150%'><u><span style='font-size:16.0pt;
+line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>¿é¥X»P¿é¤J¡]¸ê®Æ¡^³W®æ<span lang=EN-US><o:p></o:p></span></span></u></p>
+
+<p class=MsoNormal style='line-height:150%'><b><span style='font-size:14.0pt;
+line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>¿é¤J<span lang=EN-US><o:p></o:p></span></span></b></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='mso-bidi-font-size:
+12.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>¤À¦¨¤TºØ§Î¦¡¡G<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:48.0pt;mso-para-margin-left:0gd;
+text-indent:-24.0pt;line-height:150%;mso-list:l4 level1 lfo2'><![if !supportLists]><span
+lang=EN-US style='mso-bidi-font-size:12.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif;
+mso-bidi-font-family:·L³n¥¿¶ÂÅé'><span style='mso-list:Ignore'>&#9312;<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='mso-bidi-font-size:12.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>¤£§tµù¸ÑªºÀÉ®×¡C<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:48.0pt;mso-para-margin-left:0gd;
+text-indent:-24.0pt;line-height:150%;mso-list:l4 level1 lfo2'><![if !supportLists]><span
+lang=EN-US style='mso-bidi-font-size:12.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif;
+mso-bidi-font-family:·L³n¥¿¶ÂÅé'><span style='mso-list:Ignore'>&#9313;<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='mso-bidi-font-size:12.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>§tµù¸ÑªºÀÉ®×¡A¦p¤@¦æ¤¤¶}ÀY¬°¡u<span
+lang=EN-US>#</span>¡v¡Aªí¥Ü¦¹¦æ¬°µù¸Ñ¡A¬°¤£»Ý­nªº¸ê®Æ¡A»Ý°µ©¿²¤¡C<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:48.0pt;mso-para-margin-left:0gd;
+text-indent:-24.0pt;line-height:150%;mso-list:l4 level1 lfo2'><![if !supportLists]><span
+lang=EN-US style='mso-bidi-font-size:12.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif;
+mso-bidi-font-family:·L³n¥¿¶ÂÅé'><span style='mso-list:Ignore'>&#9314;<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='mso-bidi-font-size:12.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>¥H·Æ¹«ÂIÀ»µe¥¬<span
+lang=EN-US>(600*600)</span>¡A²£¥Í¸ê®Æ¡C<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='line-height:150%'><b><span style='font-size:14.0pt;
+line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>¿é¥X<span lang=EN-US><o:p></o:p></span></span></b></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='mso-bidi-font-size:
+12.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>¿é¥XÀÉ®×®æ¦¡¡G<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:48.0pt;mso-para-margin-left:0gd;
+text-indent:-24.0pt;line-height:150%;mso-list:l5 level1 lfo5'><![if !supportLists]><span
+lang=EN-US style='mso-bidi-font-size:12.0pt;line-height:150%;font-family:Wingdings;
+mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>w<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span style='mso-bidi-font-size:12.0pt;
+line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>¿é¤Jªº®y¼ÐÂI¡G<span lang=EN-US>P x
+y<span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>// </span>¨C<span
+class=GramE>­Ó</span>ÂI<span class=GramE>¦û</span>¤@¦æ¡A¨â¾ã¼Æ<span lang=EN-US> x, y </span>¬°®y¼Ð¡C<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:48.0pt;mso-para-margin-left:0gd;
+text-indent:-24.0pt;line-height:150%;mso-list:l5 level1 lfo5'><![if !supportLists]><span
+lang=EN-US style='mso-bidi-font-size:12.0pt;line-height:150%;font-family:Wingdings;
+mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>w<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span style='mso-bidi-font-size:12.0pt;
+line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>½u¬q¡G<span lang=EN-US>E x1 y1 x2
+y2<span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>// (x1, y1) </span>¬°°_ÂI¡A<span
+lang=EN-US>(x2, y2) </span>¬°²×ÂI¡A¨ä¤¤<span lang=EN-US> x1 </span><span class=GramE>¡Ø</span>
+<span lang=EN-US>x2 </span>©Î<span lang=EN-US> x1 = x2, y1 </span><span
+class=GramE>¡Ø</span> <span lang=EN-US>y2</span>¡C<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='mso-bidi-font-size:
+12.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>®y¼ÐÂI±Æ¦C¦b«e¥b¬q¡A½u¬q±Æ¦C¦b«á¥b¬q¡C®y¼ÐÂI¥H<span
+lang=EN-US>&nbsp;</span></span><span lang=EN-US style='mso-bidi-font-size:12.0pt;
+line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif;mso-bidi-font-family:"Times New Roman"'>lexical
+order</span><span style='mso-bidi-font-size:12.0pt;line-height:150%;font-family:
+"·L³n¥¿¶ÂÅé",sans-serif'>¶¶§Ç±Æ¦C¡]§Y¥ý±Æ§Ç²Ä¤@ºû®y¼Ð¡A­Y¬Û¦P¡A«h¦A±Æ§Ç²Ä¤Gºû®y¼Ð¡^¡F½u¬q¥ç¥H<span lang=EN-US>&nbsp;</span></span><span
+lang=EN-US style='mso-bidi-font-size:12.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif;
+mso-bidi-font-family:"Times New Roman"'>lexical order</span><span
+style='mso-bidi-font-size:12.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>¶¶§Ç±Æ¦C¡C<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='mso-bidi-font-size:
+12.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>¿é¥X¤å¦rÀÉ®×½d¨Ò¡G<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='line-height:150%'><!--[if gte vml 1]><o:wrapblock><v:shapetype
+  id="_x0000_t202" coordsize="21600,21600" o:spt="202" path="m,l,21600r21600,l21600,xe">
+  <v:stroke joinstyle="miter"/>
+  <v:path gradientshapeok="t" o:connecttype="rect"/>
+ </v:shapetype><v:shape id="¤å¦r¤è¶ô_x0020_2" o:spid="_x0000_s1026" type="#_x0000_t202"
+  style='position:absolute;margin-left:-2.5pt;margin-top:-99.05pt;width:185.9pt;
+  height:169.95pt;z-index:251659264;visibility:visible;mso-wrap-style:square;
+  mso-width-percent:0;mso-height-percent:0;mso-wrap-distance-left:9pt;
+  mso-wrap-distance-top:3.6pt;mso-wrap-distance-right:9pt;
+  mso-wrap-distance-bottom:3.6pt;mso-position-horizontal:absolute;
+  mso-position-horizontal-relative:text;mso-position-vertical:absolute;
+  mso-position-vertical-relative:text;mso-width-percent:0;mso-height-percent:0;
+  mso-width-relative:margin;mso-height-relative:margin;v-text-anchor:top'
+  o:gfxdata="UEsDBBQABgAIAAAAIQC2gziS/gAAAOEBAAATAAAAW0NvbnRlbnRfVHlwZXNdLnhtbJSRQU7DMBBF
+90jcwfIWJU67QAgl6YK0S0CoHGBkTxKLZGx5TGhvj5O2G0SRWNoz/78nu9wcxkFMGNg6quQqL6RA
+0s5Y6ir5vt9lD1JwBDIwOMJKHpHlpr69KfdHjyxSmriSfYz+USnWPY7AufNIadK6MEJMx9ApD/oD
+OlTrorhX2lFEilmcO2RdNtjC5xDF9pCuTyYBB5bi6bQ4syoJ3g9WQ0ymaiLzg5KdCXlKLjvcW893
+SUOqXwnz5DrgnHtJTxOsQfEKIT7DmDSUCaxw7Rqn8787ZsmRM9e2VmPeBN4uqYvTtW7jvijg9N/y
+JsXecLq0q+WD6m8AAAD//wMAUEsDBBQABgAIAAAAIQA4/SH/1gAAAJQBAAALAAAAX3JlbHMvLnJl
+bHOkkMFqwzAMhu+DvYPRfXGawxijTi+j0GvpHsDYimMaW0Yy2fr2M4PBMnrbUb/Q94l/f/hMi1qR
+JVI2sOt6UJgd+ZiDgffL8ekFlFSbvV0oo4EbChzGx4f9GRdb25HMsYhqlCwG5lrLq9biZkxWOiqY
+22YiTra2kYMu1l1tQD30/bPm3wwYN0x18gb45AdQl1tp5j/sFB2T0FQ7R0nTNEV3j6o9feQzro1i
+OWA14Fm+Q8a1a8+Bvu/d/dMb2JY5uiPbhG/ktn4cqGU/er3pcvwCAAD//wMAUEsDBBQABgAIAAAA
+IQBMKK4yPAIAAEsEAAAOAAAAZHJzL2Uyb0RvYy54bWysVF1uEzEQfkfiDpbfyf40SZtVNlVJCUIq
+P1LhAF6vN2vhP2wnu+EClThAeeYAHIADtedg7E1DVOAFsQ+WxzP+PPN9Mzs/76VAW2Yd16rE2SjF
+iCmqa67WJf7wfvXsDCPniaqJ0IqVeMccPl88fTLvTMFy3WpRM4sARLmiMyVuvTdFkjjaMkncSBum
+wNloK4kH066T2pIO0KVI8jSdJp22tbGaMufg9HJw4kXEbxpG/dumccwjUWLIzcfVxrUKa7KYk2Jt
+iWk53adB/iELSbiCRw9Ql8QTtLH8NyjJqdVON35EtUx003DKYg1QTZY+qua6JYbFWoAcZw40uf8H
+S99s31nE6xLn2SlGikgQ6f725u771/vbH3ffvqA8cNQZV0DotYFg3z/XPWgd63XmStOPDim9bIla
+swtrddcyUkOOWbiZHF0dcFwAqbrXuoanyMbrCNQ3VgYCgRIE6KDV7qAP6z2icJifTNPZCbgo+LJx
+Op7mUcGEFA/XjXX+JdMShU2JLTRAhCfbK+dDOqR4CAmvOS14veJCRMOuq6WwaEugWVbxixU8ChMK
+dSWeTfLJwMBfIdL4/QlCcg9dL7gs8dkhiBSBtxeqjj3pCRfDHlIWak9k4G5g0fdVvxem0vUOKLV6
+6G6YRti02n7GqIPOLrH7tCGWYSReKZBllo3HYRSiMZ6cAofIHnuqYw9RFKBK7DEatksfxycSZi5A
+vhWPxAadh0z2uULHRr730xVG4tiOUb/+AYufAAAA//8DAFBLAwQUAAYACAAAACEAaHn30OAAAAAK
+AQAADwAAAGRycy9kb3ducmV2LnhtbEyPwU7DMAyG70i8Q2QkblvaTatGaTohpp0ZAwlxSxOvrdY4
+pcm6jqfHnOBkWf71+/uKzeQ6MeIQWk8K0nkCAsl421Kt4P1tN1uDCFGT1Z0nVHDFAJvy9qbQufUX
+esXxEGvBJRRyraCJsc+lDKZBp8Pc90h8O/rB6cjrUEs76AuXu04ukiSTTrfEHxrd43OD5nQ4OwVh
+u//qzXFfnRp7/X7ZjivzsftU6v5uenoEEXGKf2H4xWd0KJmp8meyQXQKZitWiTzTh3UKghPLLGOZ
+SsFimYIsC/lfofwBAAD//wMAUEsBAi0AFAAGAAgAAAAhALaDOJL+AAAA4QEAABMAAAAAAAAAAAAA
+AAAAAAAAAFtDb250ZW50X1R5cGVzXS54bWxQSwECLQAUAAYACAAAACEAOP0h/9YAAACUAQAACwAA
+AAAAAAAAAAAAAAAvAQAAX3JlbHMvLnJlbHNQSwECLQAUAAYACAAAACEATCiuMjwCAABLBAAADgAA
+AAAAAAAAAAAAAAAuAgAAZHJzL2Uyb0RvYy54bWxQSwECLQAUAAYACAAAACEAaHn30OAAAAAKAQAA
+DwAAAAAAAAAAAAAAAACWBAAAZHJzL2Rvd25yZXYueG1sUEsFBgAAAAAEAAQA8wAAAKMFAAAAAA==
+">
+  <v:textbox style='mso-fit-shape-to-text:t'>
+   <![if !mso]>
+   <table cellpadding=0 cellspacing=0 width="100%">
+    <tr>
+     <td><![endif]>
+     <div>
+     <p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'><span
+     style='font-family:"Times New Roman",serif;mso-fareast-font-family:·L³n¥¿¶ÂÅé;
+     mso-ansi-language:ZH-TW'>P 103 200<o:p></o:p></span></p>
+     <p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'><span
+     style='font-family:"Times New Roman",serif;mso-fareast-font-family:·L³n¥¿¶ÂÅé;
+     mso-ansi-language:ZH-TW'>P 193 64<o:p></o:p></span></p>
+     <p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'><span
+     style='font-family:"Times New Roman",serif;mso-fareast-font-family:·L³n¥¿¶ÂÅé;
+     mso-ansi-language:ZH-TW'>P 193 370<o:p></o:p></span></p>
+     <p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'><span
+     style='font-family:"Times New Roman",serif;mso-fareast-font-family:·L³n¥¿¶ÂÅé;
+     mso-ansi-language:ZH-TW'>P 283 200<o:p></o:p></span></p>
+     <p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'><span
+     style='font-family:"Times New Roman",serif;mso-fareast-font-family:·L³n¥¿¶ÂÅé;
+     mso-ansi-language:ZH-TW'>E 0 34 193 161<o:p></o:p></span></p>
+     <p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'><span
+     style='font-family:"Times New Roman",serif;mso-fareast-font-family:·L³n¥¿¶ÂÅé;
+     mso-ansi-language:ZH-TW'>E 0 363 193 261<o:p></o:p></span></p>
+     <p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'><span
+     style='font-family:"Times New Roman",serif;mso-fareast-font-family:·L³n¥¿¶ÂÅé;
+     mso-ansi-language:ZH-TW'>E 193 161 193 261<o:p></o:p></span></p>
+     <p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'><span
+     style='font-family:"Times New Roman",serif;mso-fareast-font-family:·L³n¥¿¶ÂÅé;
+     mso-ansi-language:ZH-TW'>E 193 161 437 0<o:p></o:p></span></p>
+     <p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'><span
+     style='font-family:"Times New Roman",serif;mso-fareast-font-family:·L³n¥¿¶ÂÅé;
+     mso-ansi-language:ZH-TW'>E 193 261 600 476</span><span lang=EN-US
+     style='font-family:"Times New Roman",serif;mso-fareast-font-family:·L³n¥¿¶ÂÅé'><o:p></o:p></span></p>
+     </div>
+     <![if !mso]></td>
+    </tr>
+   </table>
+   <![endif]></v:textbox>
+  <w:wrap type="topAndBottom"/>
+ </v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+ <table cellpadding=0 cellspacing=0 align=left>
+  <tr>
+   <td width=9 height=0></td>
+  </tr>
+  <tr>
+   <td></td>
+   <td><img width=252 height=231 src="Voronoi%20Diagram.files/image001.png"
+   alt="¤å¦r¤è¶ô: P 103 200&#13;&#10;P 193 64&#13;&#10;P 193 370&#13;&#10;P 283 200&#13;&#10;E 0 34 193 161&#13;&#10;E 0 363 193 261&#13;&#10;E 193 161 193 261&#13;&#10;E 193 161 437 0&#13;&#10;E 193 261 600 476&#13;&#10;"
+   v:shapes="¤å¦r¤è¶ô_x0020_2"></td>
+  </tr>
+ </table>
+ </span><![endif]><!--[if gte vml 1]></o:wrapblock><![endif]--><br
+style='mso-ignore:vglayout' clear=ALL>
+<span lang=EN-US style='mso-bidi-font-size:12.0pt;line-height:150%;font-family:
+"·L³n¥¿¶ÂÅé",sans-serif'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='line-height:150%'><u><span style='font-size:16.0pt;
+line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>¥\¯à³W®æ»P¤¶­±³W®æ<span lang=EN-US><o:p></o:p></span></span></u></p>
+
+<p class=MsoNormal style='line-height:150%'><b><span style='font-size:14.0pt;
+line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>¤¶­±<span lang=EN-US><o:p></o:p></span></span></b></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+14.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif;mso-no-proof:yes'><!--[if gte vml 1]><v:shapetype
+ id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
+ path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="¹Ï¤ù_x0020_1" o:spid="_x0000_i1045" type="#_x0000_t75"
+ style='width:526.5pt;height:7in;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Voronoi%20Diagram.files/image002.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=702 height=672
+src="Voronoi%20Diagram.files/image003.png" v:shapes="¹Ï¤ù_x0020_1"><![endif]></span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='line-height:150%'><b><span style='font-size:14.0pt;
+line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>¥\¯à»¡©ú<span lang=EN-US><o:p></o:p></span></span></b></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='mso-bidi-font-size:
+12.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>Next: </span><span
+style='mso-bidi-font-size:12.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>¤U¤@<span
+class=GramE>µ§´ú¸ê</span><span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='mso-bidi-font-size:
+12.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>Run: </span><span
+style='mso-bidi-font-size:12.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>°õ¦æ<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='mso-bidi-font-size:
+12.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>Step by step: </span><span
+style='mso-bidi-font-size:12.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>³v¨B°õ¦æ<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='mso-bidi-font-size:
+12.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>Clear: </span><span
+style='mso-bidi-font-size:12.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>²MªÅµe¥¬<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='mso-bidi-font-size:
+12.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>Open: </span><span
+style='mso-bidi-font-size:12.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>¶}±Ò»PÅª¨úÀÉ®×<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='mso-bidi-font-size:
+12.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>Save: </span><span
+style='mso-bidi-font-size:12.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>¿é¥XÀÉ®×<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='line-height:150%'><u><span style='font-size:16.0pt;
+line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>³nÅé´ú¸Õ³W¹º®Ñ<span lang=EN-US><o:p></o:p></span></span></u></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='mso-bidi-font-size:
+12.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>¤U¸ü©óªþ¿ýªº°õ¦æÀÉ»P¿é¤JÀÉ«á¡A§Y¥i°õ¦æ¡C<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='mso-bidi-font-size:
+12.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>¨Ï¥Î¨ì<span lang=EN-US>Divide-and-conquer</span>ºtºâªk¡A±N¸ê®Æ<span
+lang=EN-US>divide</span>»P<span lang=EN-US>merge</span>¼Æ¦¸¡A§e²{³Ì«áµ²ªG¡C<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='line-height:150%'><b><span style='font-size:26.0pt;
+line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>³nÅé»¡©ú<span lang=EN-US><o:p></o:p></span></span></b></p>
+
+<p class=MsoNormal style='line-height:150%'><u><span style='font-size:16.0pt;
+line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>¦w¸Ë»¡©ú<span lang=EN-US><o:p></o:p></span></span></u></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='mso-bidi-font-size:
+12.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>¤U¸ü¡u<span lang=EN-US>Voronoi.exe</span>¡v«á¨Ã°õ¦æ§Y¥i®Ú¾Ú¥H¤U¨BÆJ¾Þ§@¡C<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='line-height:150%'><u><span style='font-size:16.0pt;
+line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>°õ¦æ¨BÆJ<span lang=EN-US><o:p></o:p></span></span></u></p>
+
+<p class=MsoNormal style='line-height:150%'><b><span style='font-size:14.0pt;
+line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>Ã¸»sÂI®y¼Ð<span lang=EN-US><o:p></o:p></span></span></b></p>
+
+<p class=MsoListParagraph style='margin-left:24.0pt;mso-para-margin-left:0gd;
+text-indent:-24.0pt;line-height:150%;mso-list:l1 level1 lfo6'><![if !supportLists]><span
+lang=EN-US style='mso-bidi-font-size:12.0pt;line-height:150%;font-family:Wingdings;
+mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>w<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span style='mso-bidi-font-size:12.0pt;
+line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>¥i¥Î·Æ¹«ÂIÀ»µe¥¬¡A§Y¥i²£¥ÍÂI®y¼Ð¡C<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:24.0pt;mso-para-margin-left:0gd;
+text-indent:-24.0pt;line-height:150%;mso-list:l1 level1 lfo6'><![if !supportLists]><span
+lang=EN-US style='mso-bidi-font-size:12.0pt;line-height:150%;font-family:Wingdings;
+mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>w<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span style='mso-bidi-font-size:12.0pt;
+line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>ÂIÀ»¡u<span lang=EN-US>Open</span>¡v«ö¶s¡A¿ï¾Ü¿é¤JÀÉ¡C<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='mso-bidi-font-size:
+12.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif;mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="¹Ï¤ù_x0020_2" o:spid="_x0000_i1044" type="#_x0000_t75" style='width:526.5pt;
+ height:7in;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Voronoi%20Diagram.files/image004.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=702 height=672
+src="Voronoi%20Diagram.files/image005.png" v:shapes="¹Ï¤ù_x0020_2"><![endif]></span><span
+lang=EN-US style='mso-bidi-font-size:12.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='line-height:150%'><b><span style='font-size:14.0pt;
+line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>Ã¸»s<span lang=EN-US>Voronoi
+Diagram<o:p></o:p></span></span></b></p>
+
+<p class=MsoListParagraph style='margin-left:24.0pt;mso-para-margin-left:0gd;
+text-indent:-24.0pt;line-height:150%;mso-list:l6 level1 lfo7'><![if !supportLists]><span
+lang=EN-US style='mso-bidi-font-size:12.0pt;line-height:150%;font-family:Wingdings;
+mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>w<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span style='mso-bidi-font-size:12.0pt;
+line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>ÂIÀ»¡u<span lang=EN-US>Run</span>¡v«ö¶s¡Aª½±µµe¥X<span
+lang=EN-US>Voronoi Diagram</span>¡C<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:24.0pt;mso-para-margin-left:0gd;
+text-indent:-24.0pt;line-height:150%;mso-list:l6 level1 lfo7'><![if !supportLists]><span
+lang=EN-US style='mso-bidi-font-size:12.0pt;line-height:150%;font-family:Wingdings;
+mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>w<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span style='mso-bidi-font-size:12.0pt;
+line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>ÂIÀ»¡u<span lang=EN-US>Step</span>¡v«ö¶s¡A³v¨B°õ¦æ¡A³Ì«áµe¥X<span
+lang=EN-US>Voronoi Diagram</span>¡C<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:24.0pt;mso-para-margin-left:0gd;
+text-indent:-24.0pt;line-height:150%;mso-list:l6 level1 lfo7'><![if !supportLists]><span
+lang=EN-US style='mso-bidi-font-size:12.0pt;line-height:150%;font-family:Wingdings;
+mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>w<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span style='mso-bidi-font-size:12.0pt;
+line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>ÂIÀ»¡u<span lang=EN-US>Open</span>¡v«ö¶s¡A¿ï¾Ü¿é¥XÀÉ¡Aª½±µ®Ú¾Ú¿é¥X<span
+class=GramE>ÀÉ</span>¸ê®Æµe¥X<span lang=EN-US style='mso-font-kerning:0pt'>Voronoi
+Diagram</span><span style='mso-font-kerning:0pt'>¡C<span lang=EN-US><o:p></o:p></span></span></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='mso-bidi-font-size:
+12.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif;mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="¹Ï¤ù_x0020_13" o:spid="_x0000_i1043" type="#_x0000_t75" style='width:527pt;
+ height:504.5pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Voronoi%20Diagram.files/image006.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=703 height=673
+src="Voronoi%20Diagram.files/image007.jpg" v:shapes="¹Ï¤ù_x0020_13"><![endif]></span><span
+lang=EN-US style='mso-bidi-font-size:12.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='mso-bidi-font-size:
+12.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif;mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="¹Ï¤ù_x0020_12" o:spid="_x0000_i1042" type="#_x0000_t75" style='width:527pt;
+ height:504.5pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Voronoi%20Diagram.files/image008.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=703 height=673
+src="Voronoi%20Diagram.files/image009.jpg" v:shapes="¹Ï¤ù_x0020_12"><![endif]></span><span
+lang=EN-US style='mso-bidi-font-size:12.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='mso-bidi-font-size:
+12.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='line-height:150%'><b><span style='font-size:14.0pt;
+line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>¿é¥Xµ²ªG<span lang=EN-US><o:p></o:p></span></span></b></p>
+
+<p class=MsoListParagraph style='margin-left:24.0pt;mso-para-margin-left:0gd;
+text-indent:-24.0pt;line-height:150%;mso-list:l1 level1 lfo8'><![if !supportLists]><span
+lang=EN-US style='mso-bidi-font-size:12.0pt;line-height:150%;font-family:Wingdings;
+mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>w<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span style='mso-bidi-font-size:12.0pt;
+line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>ÂIÀ»¡u<span lang=EN-US>Save</span>¡v«ö¶s¡A±Nµ²ªG¿é¥X¦ÜÀÉ®×¨ÃÀx¦s¡C<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='mso-bidi-font-size:
+12.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif;mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="¹Ï¤ù_x0020_5" o:spid="_x0000_i1041" type="#_x0000_t75" style='width:525pt;
+ height:7in;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Voronoi%20Diagram.files/image010.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=700 height=672
+src="Voronoi%20Diagram.files/image011.png" v:shapes="¹Ï¤ù_x0020_5"><![endif]></span><span
+lang=EN-US style='mso-bidi-font-size:12.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='line-height:150%'><b><span style='font-size:26.0pt;
+line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>µ{¦¡³]­p<span lang=EN-US><o:p></o:p></span></span></b></p>
+
+<p class=MsoNormal style='line-height:150%'><u><span style='font-size:16.0pt;
+line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>¤TÂI¥H¤U<span lang=EN-US><o:p></o:p></span></span></u></p>
+
+<p class=MsoNormal style='line-height:150%'><b><span style='font-size:14.0pt;
+line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>¤@¯ë±¡ªp<span lang=EN-US><o:p></o:p></span></span></b></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='mso-bidi-font-size:
+12.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>­n¨D¥X¨âÂI¤§¶¡ªº¤¤««½u¡A´N¬O±N¨âÂI§Î¦¨<span
+class=GramE>¤@</span>¦V¶q¡A¨Ã§ä¥X¨äªk¦V¶q¡A¦A®Ú¾Úªk¦V¶qªº¤è¦V¡A±N½u¬q©µ¦ù¡A¦pªG¬O¨âÂIªº<span lang=EN-US>case</span>¡A´N±q¨âÂIªº¤¤ÂI©µ¦ù¡A¦pªG¬O¤TÂIªº<span
+lang=EN-US>case</span>¡A´N±q¤TÂIªº¤¤¤ß¡A¤]´N¬O¥~¤ß°µ©µ¦ù¡C<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='mso-bidi-font-size:
+12.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>³oÃä­nª`·Nªº¬O¡A¤TÂIªº<span
+lang=EN-US>case</span>¤¤¡A»Ý­n¥ý±NÂIªº<span class=GramE>¶¶§Ç¨Ì°f®É°w</span>°µ±Æ§Ç¡A¤~¦³¿ìªk±Nªk¦V¶q©¹¥~©µ¦ù¡A¦Ó¤£¬O©¹¤Ï¤è¦V©µ¦ù¡C<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='mso-bidi-font-size:
+12.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>§Ú·|±N½u¬qªº¤@ÃäµL­­©µ¦ù¡A¦]¬°¦b¤§«á§ä<span
+lang=EN-US>Hyper Plane</span>®É¡A¦³¥i¯à¥æÂI¦bµe¥¬½d³ò¥~¡C<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='line-height:150%'><b><span style='font-size:14.0pt;
+line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>¦@½u<span lang=EN-US><o:p></o:p></span></span></b></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='mso-bidi-font-size:
+12.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>ªí¥Ü¨âÂIªº±×²v³£¬O¤@¼Ëªº¡A©Ò¥H¥u­n§PÂ_³o­Ó¡A´N¥i¥Hª¾¹D¬O§_¦@½u¡C<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='line-height:150%'><u><span style='font-size:16.0pt;
+line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>¦h©ó¤TÂI<span lang=EN-US><o:p></o:p></span></span></u></p>
+
+<p class=MsoNormal style='line-height:150%'><b><span lang=EN-US
+style='font-size:14.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>Divide<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='mso-bidi-font-size:
+12.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>¥»¨Ó·Q®Ú¾Ú¤¤½u¨Ó±NÂI¤À¦¨<span
+class=GramE>¨âÃä¡A</span>¦ý«á¨Ó´Nª½±µ°£¥H<span lang=EN-US>2</span>¨Ó±NÂI¤À¦¨<span class=GramE>¨âÃä¡A</span>³o¼Ë¤ñ¸ûÂ²³æ©úÁA¡A¤]¤£¼vÅT±µ¤U¨Ó<span
+lang=EN-US>merge</span>ªº³¡¤À¡C<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='line-height:150%'><b><span lang=EN-US
+style='font-size:14.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>Merge<o:p></o:p></span></b></p>
+
+<p class=MsoListParagraph style='margin-left:24.0pt;mso-para-margin-left:0gd;
+text-indent:-24.0pt;line-height:150%;mso-list:l1 level1 lfo8'><![if !supportLists]><span
+lang=EN-US style='mso-bidi-font-size:12.0pt;line-height:150%;font-family:Wingdings;
+mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>w<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='mso-bidi-font-size:12.0pt;
+line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>Convex Hull<o:p></o:p></span></p>
+
+<p class=MsoListParagraph style='margin-left:24.0pt;mso-para-margin-left:0gd;
+line-height:150%'><span style='mso-bidi-font-size:12.0pt;line-height:150%;
+font-family:"·L³n¥¿¶ÂÅé",sans-serif'>³o³¡¤À§Ú¬O¥Î<span lang=EN-US><a
+href="https://web.ntnu.edu.tw/~algo/ConvexHull.html">Andrew's Monotone Chain<span
+lang=EN-US><span lang=EN-US>ºtºâªk</span></span></a></span>¨Ó§ä¥X<span lang=EN-US>Convex
+Hull</span>¡A¥¦¬O±q¥ª¨ì¥k±½´y¨C<span class=GramE>­Ó</span>ÂI¡A§ä¥X¤W¤U¥b<span class=GramE>¥Y</span>¥]¡C<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:24.0pt;mso-para-margin-left:0gd;
+line-height:150%'><span style='mso-bidi-font-size:12.0pt;line-height:150%;
+font-family:"·L³n¥¿¶ÂÅé",sans-serif'>¥ª¥k¨âÃäªº<span lang=EN-US>Convex Hull</span>§ä§¹«á¡A»Ý­n§ä¥¦­Ìªº¤W¤U¤Á½u¡A¥u­n§â¨âÃä<span
+lang=EN-US>Convex Hull</span>ªºÂI°µ±Æ§Ç¡A¬Ý¾Fªñ¨âÂI¬O§_¤À§O¦b¥ª<span lang=EN-US>Convex Hull</span>»P¥k<span
+lang=EN-US>Convex Hull</span>¡A´N§ä¨ì¤W¤U¤Á½u¤F¡C<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:24.0pt;mso-para-margin-left:0gd;
+text-indent:-24.0pt;line-height:150%;mso-list:l1 level1 lfo8'><![if !supportLists]><span
+lang=EN-US style='mso-bidi-font-size:12.0pt;line-height:150%;font-family:Wingdings;
+mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>w<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='mso-bidi-font-size:12.0pt;
+line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>Hyper Plane<o:p></o:p></span></p>
+
+<p class=MsoListParagraph style='margin-left:24.0pt;mso-para-margin-left:0gd;
+line-height:150%'><span style='mso-bidi-font-size:12.0pt;line-height:150%;
+font-family:"·L³n¥¿¶ÂÅé",sans-serif'>¤@¶}©l§Ú¬O¥ÎÂI»PÂI¤§¶¡ªº¶ZÂ÷ªøµu¨Ó§PÂ_<a name="_Hlk152717890">¨â­Ó</a><span
+class=SpellE><span style='mso-bookmark:_Hlk152717890'><span lang=EN-US>Vonoroi</span></span></span><span
+style='mso-bookmark:_Hlk152717890'><span lang=EN-US> Diagram</span>¤§¶¡ªº³s½u</span>¡A¦ý¦]¬°§Ú¤@ª½­×§ï¤£¦n¡A©Ò¥H§ó§ï¦¨¥t¤@­Ó¸ê®Æµ²ºc¡A¬Ý¨â­Ó<span
+class=SpellE><span lang=EN-US>Vonoroi</span></span><span lang=EN-US> Diagram</span>¤§¶¡ªº³s½uªº¤¤««½u¡A¤]´N¬O<span
+lang=EN-US>Hyper Plane</span>½u¡A¸I¨ì­þ¨â<span class=GramE>­Ó</span>ÂIªº¤¤««½u¡A´N¥i¥H§ä¨ì¤U¤@±ø¨â­Ó<span
+class=SpellE><span lang=EN-US>Vonoroi</span></span><span lang=EN-US> Diagram</span>¤§¶¡ªº³s½u¡C<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:24.0pt;mso-para-margin-left:0gd;
+text-indent:-24.0pt;line-height:150%;mso-list:l1 level1 lfo8'><![if !supportLists]><span
+lang=EN-US style='mso-bidi-font-size:12.0pt;line-height:150%;font-family:Wingdings;
+mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>w<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span style='mso-bidi-font-size:12.0pt;
+line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>®ø°£¦h¾l½u¬q<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:24.0pt;mso-para-margin-left:0gd;
+line-height:150%'><span style='mso-bidi-font-size:12.0pt;line-height:150%;
+font-family:"·L³n¥¿¶ÂÅé",sans-serif'>®Ú¾Ú<span lang=EN-US>Hyper Plane</span>½u©M¸I¨ì<span
+lang=EN-US>Voronoi Diagram</span>½u¬qªº±×²v¡A¨Ó§PÂ_­n®ø­þ¤@³¡¤Àªº½u¬q¡A¦ý³o³¡¤ÀµLªk§¹¥þ®ø°£¤£¥²­nªº½u¬q¡A©Ò¥H¦b°µ§¹<span
+lang=EN-US>Hyper Plane</span>«á¡A§Ú·|¦b³Ì«á½T»{¬O§_¦³<span class=GramE>»Ý­n®ø½uªº</span>¦a¤è¡A°O¦í©Ò¦³ªº¥æÂI¡A¨Ã¬Ý½u¬q¨âºÝ¤§<span
+class=GramE>¤@</span>¬O§_¬°<span lang=EN-US>Voronoi Diagram</span>ªº¥æÂI¡A¦ý¦b³o³¡¤ÀÁÙ¬O¦³ÂI¿ù»~¡A¦³¥i¯à·|»~<span
+class=GramE>§R</span>¥¿½Tªº½u¬q¡A©Ò¥H³o³¡¤À¤´»Ý­n®É¶¡¥h½Õ¾ã¡C<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='line-height:150%'><b><span style='font-size:26.0pt;
+line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>³nÅé´ú¸Õ»P¹êÅçµ²ªG<span lang=EN-US><o:p></o:p></span></span></b></p>
+
+<p class=MsoNormal style='line-height:150%'><u><span style='font-size:16.0pt;
+line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>°õ¦æÀô¹Ò<span lang=EN-US><o:p></o:p></span></span></u></p>
+
+<p class=MsoListParagraph style='margin-left:24.0pt;mso-para-margin-left:0gd;
+text-indent:-24.0pt;line-height:150%;mso-list:l1 level1 lfo8'><![if !supportLists]><span
+lang=EN-US style='mso-bidi-font-size:12.0pt;line-height:150%;font-family:Wingdings;
+mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>w<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span style='mso-bidi-font-size:12.0pt;
+line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>µ{¦¡»y¨¥¡G<span lang=EN-US>Python<o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:24.0pt;mso-para-margin-left:0gd;
+text-indent:-24.0pt;line-height:150%;mso-list:l1 level1 lfo8'><![if !supportLists]><span
+lang=EN-US style='mso-bidi-font-size:12.0pt;line-height:150%;font-family:Wingdings;
+mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>w<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span style='mso-bidi-font-size:12.0pt;
+line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>§@·~¨t²Î¡G<span lang=EN-US>Windows
+11<o:p></o:p></span></span></p>
+
+<p class=MsoListParagraph style='margin-left:24.0pt;mso-para-margin-left:0gd;
+text-indent:-24.0pt;line-height:150%;mso-list:l1 level1 lfo8'><![if !supportLists]><span
+lang=EN-US style='mso-bidi-font-size:12.0pt;line-height:150%;font-family:Wingdings;
+mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>w<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span style='mso-bidi-font-size:12.0pt;
+line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>½sÄ¶¾¹¡G<span lang=EN-US>PyCharm Community
+Edition 2021.1.3 x64 </span></span><span lang=EN-US style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="¹Ï¤ù_x0020_11" o:spid="_x0000_i1040" type="#_x0000_t75" alt="Python Tool Review: Using PyCharm for Python Development - and More |  Caktus Group"
+ style='width:26.5pt;height:26.5pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Voronoi%20Diagram.files/image012.png" o:title=" Using PyCharm for Python Development - and More |  Caktus Group"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=35 height=35
+src="Voronoi%20Diagram.files/image013.png"
+alt="Python Tool Review: Using PyCharm for Python Development - and More |  Caktus Group"
+v:shapes="¹Ï¤ù_x0020_11"><![endif]></span><span lang=EN-US style='mso-bidi-font-size:
+12.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='mso-bidi-font-size:
+12.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif;mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="¹Ï¤ù_x0020_10" o:spid="_x0000_i1039" type="#_x0000_t75" style='width:706.5pt;
+ height:465pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Voronoi%20Diagram.files/image014.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=942 height=620
+src="Voronoi%20Diagram.files/image015.png" v:shapes="¹Ï¤ù_x0020_10"><![endif]></span><span
+lang=EN-US style='mso-bidi-font-size:12.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='line-height:150%'><u><span style='font-size:16.0pt;
+line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>¹êÅçµ²ªG<span lang=EN-US><o:p></o:p></span></span></u></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='mso-bidi-font-size:
+12.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>¤´¦³¦hÂI<span lang=EN-US>case</span>ªºµ²ªG²£¥Í¿ù»~¡A¥D­n¬O¦b<span
+class=GramE>§R</span>½uªº¥X²{°ÝÃD¡A¦pªG<span lang=EN-US>Voronoi Diagram</span>ªº½u¬q¨S¦³¿ù»~¡A¨º¦b<span
+lang=EN-US>merge</span>ªº®É­Ô´N·|±o¥X¥¿½Tµ²ªG¡A¦pªGÁÙ¦³¨S¦³§R°£°®²bªº½u¬q¡A´N·|¼vÅT¨ì±µ¤U¨Ó<span lang=EN-US>merge</span>ªº³¡¤À¡C<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='line-height:150%'><b><span lang=EN-US
+style='font-size:14.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>3</span></b><b><span
+style='font-size:14.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>ÂI¥H¤U<span
+lang=EN-US><o:p></o:p></span></span></b></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='mso-bidi-font-size:
+12.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif;mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="¹Ï¤ù_x0020_3" o:spid="_x0000_i1038" type="#_x0000_t75" style='width:355.5pt;
+ height:340pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Voronoi%20Diagram.files/image016.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=474 height=453
+src="Voronoi%20Diagram.files/image017.png" v:shapes="¹Ï¤ù_x0020_3"><![endif]></span><span
+lang=EN-US style='mso-bidi-font-size:12.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'><span
+style='mso-spacerun:yes'>&nbsp;</span><span
+style='mso-spacerun:yes'>&nbsp;</span><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="¹Ï¤ù_x0020_4" o:spid="_x0000_i1037" type="#_x0000_t75" style='width:355.5pt;
+ height:340pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Voronoi%20Diagram.files/image018.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=474 height=453
+src="Voronoi%20Diagram.files/image019.png" v:shapes="¹Ï¤ù_x0020_4"><![endif]><!--[if gte vml 1]><v:shape
+ id="¹Ï¤ù_x0020_6" o:spid="_x0000_i1036" type="#_x0000_t75" style='width:355.5pt;
+ height:340pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Voronoi%20Diagram.files/image020.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=474 height=453
+src="Voronoi%20Diagram.files/image021.png" v:shapes="¹Ï¤ù_x0020_6"><![endif]></span><span
+style='mso-spacerun:yes'>&nbsp; </span><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="¹Ï¤ù_x0020_7" o:spid="_x0000_i1035" type="#_x0000_t75" style='width:355.5pt;
+ height:340pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Voronoi%20Diagram.files/image022.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=474 height=453
+src="Voronoi%20Diagram.files/image023.png" v:shapes="¹Ï¤ù_x0020_7"><![endif]></span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='line-height:150%'><b><span lang=EN-US
+style='font-size:14.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>4~6</span></b><b><span
+style='font-size:14.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>ÂI¡]<span
+lang=EN-US>merge 1</span>¦¸¡^<span lang=EN-US><o:p></o:p></span></span></b></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='mso-bidi-font-size:
+12.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif;mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="¹Ï¤ù_x0020_8" o:spid="_x0000_i1034" type="#_x0000_t75" style='width:355.5pt;
+ height:340pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Voronoi%20Diagram.files/image024.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=474 height=453
+src="Voronoi%20Diagram.files/image025.png" v:shapes="¹Ï¤ù_x0020_8"><![endif]><span
+style='mso-spacerun:yes'>&nbsp; </span><!--[if gte vml 1]><v:shape id="¹Ï¤ù_x0020_9"
+ o:spid="_x0000_i1033" type="#_x0000_t75" style='width:355.5pt;height:340pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Voronoi%20Diagram.files/image026.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=474 height=453
+src="Voronoi%20Diagram.files/image027.png" v:shapes="¹Ï¤ù_x0020_9"><![endif]><!--[if gte vml 1]><v:shape
+ id="¹Ï¤ù_x0020_14" o:spid="_x0000_i1032" type="#_x0000_t75" style='width:355.5pt;
+ height:340pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Voronoi%20Diagram.files/image028.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=474 height=453
+src="Voronoi%20Diagram.files/image029.png" v:shapes="¹Ï¤ù_x0020_14"><![endif]><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;</span><!--[if gte vml 1]><v:shape id="¹Ï¤ù_x0020_15"
+ o:spid="_x0000_i1031" type="#_x0000_t75" style='width:355.5pt;height:340pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Voronoi%20Diagram.files/image030.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=474 height=453
+src="Voronoi%20Diagram.files/image031.png" v:shapes="¹Ï¤ù_x0020_15"><![endif]><!--[if gte vml 1]><v:shape
+ id="¹Ï¤ù_x0020_16" o:spid="_x0000_i1030" type="#_x0000_t75" style='width:355.5pt;
+ height:340pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Voronoi%20Diagram.files/image032.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=474 height=453
+src="Voronoi%20Diagram.files/image033.png" v:shapes="¹Ï¤ù_x0020_16"><![endif]><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;</span><!--[if gte vml 1]><v:shape id="¹Ï¤ù_x0020_17"
+ o:spid="_x0000_i1029" type="#_x0000_t75" style='width:355.5pt;height:340pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Voronoi%20Diagram.files/image034.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=474 height=453
+src="Voronoi%20Diagram.files/image035.png" v:shapes="¹Ï¤ù_x0020_17"><![endif]></span><span
+lang=EN-US style='mso-bidi-font-size:12.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='line-height:150%'><b><span lang=EN-US
+style='font-size:14.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>7</span></b><b><span
+style='font-size:14.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>ÂI¥H¤W¡]<span
+lang=EN-US>merge 2</span>¦¸¥H¤W¡^<span lang=EN-US><o:p></o:p></span></span></b></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='mso-bidi-font-size:
+12.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif;mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="¹Ï¤ù_x0020_18" o:spid="_x0000_i1028" type="#_x0000_t75" style='width:355.5pt;
+ height:340pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Voronoi%20Diagram.files/image036.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=474 height=453
+src="Voronoi%20Diagram.files/image037.png" v:shapes="¹Ï¤ù_x0020_18"><![endif]><span
+style='mso-spacerun:yes'>&nbsp; </span><!--[if gte vml 1]><v:shape id="¹Ï¤ù_x0020_19"
+ o:spid="_x0000_i1027" type="#_x0000_t75" style='width:355.5pt;height:340pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Voronoi%20Diagram.files/image038.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=474 height=453
+src="Voronoi%20Diagram.files/image039.png" v:shapes="¹Ï¤ù_x0020_19"><![endif]><!--[if gte vml 1]><v:shape
+ id="¹Ï¤ù_x0020_20" o:spid="_x0000_i1026" type="#_x0000_t75" style='width:355.5pt;
+ height:340pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Voronoi%20Diagram.files/image040.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=474 height=453
+src="Voronoi%20Diagram.files/image041.png" v:shapes="¹Ï¤ù_x0020_20"><![endif]><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;</span><!--[if gte vml 1]><v:shape id="¹Ï¤ù_x0020_21"
+ o:spid="_x0000_i1025" type="#_x0000_t75" style='width:355.5pt;height:340pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Voronoi%20Diagram.files/image042.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=474 height=453
+src="Voronoi%20Diagram.files/image043.png" v:shapes="¹Ï¤ù_x0020_21"><![endif]></span><span
+lang=EN-US style='mso-bidi-font-size:12.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='line-height:150%'><b><span style='font-size:26.0pt;
+line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>µ²½×»P¤ß±o<span lang=EN-US><o:p></o:p></span></span></b></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='mso-bidi-font-size:
+12.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>¦b¿ï¾Üµ{¦¡»y¨¥ªº®É­Ô¡A­ì¥»¬O·Q¥Î¦Û¤v³Ì±`¨Ï¥Î¤]¤ñ¸û¼ô±xªº<span
+lang=EN-US>C++</span>¨Ó¼¶¼g³o¥÷<span lang=EN-US>project</span>¡A¦ý¦]¬°<span lang=EN-US>Python</span>¬Û¹ï¤ñ¸û¦n¤W¤â¡A¥[¤W¾Çªø©j¤j³¡¤À³£¬O¥Î<span
+lang=EN-US>Python</span>¨Ó¼g¡A©Ò¥H³Ì«á¨M©w¨Ï¥Î<span lang=EN-US>Python</span>¡C<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='mso-bidi-font-size:
+12.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>¨ä¹ê³Ì¤@¶}©lªº®É­Ô³ÌÃø¤U¤â¡A»Ý­nªá¸û¦h¤ß¤O¥h«Ø¥X¬[ºc¡A§ÚÄ±±o¦b¼¶¼g¸ûÃe¤jªº<span
+lang=EN-US>project</span>®É¡A¬[ºc¬O«Ü­«­nªº¡A§Ú¤@¶}©l´N¨S¦³§Ë¦n¬[ºc¡A©Ò¥H¾ãÅé¬Ý°_¨Ó¹L©óÂø¶Ã¡A¾É­P§Ú­n­×§ïµ{¦¡ªº®É­Ô¡A·|·PÄ±¦³ÂI¦Y¤O¡A¦³®É­Ô·|¥d¦í¡A¤£ª¾¹D¸Ó«ç»ò­×§ï¤~¤ñ¸û§¹¾ã¡A³o³¡¤À§ÚÁÙ»Ý­n¦h¥[¾Ç²ß¡C<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='mso-bidi-font-size:
+12.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>¦b¼¶¼gµ{¦¡®É¡A§Ú¥d³Ì¤[ªº³¡¤À¬O¦b®ø°£¦h¾l½u¬q¡A¦]¬°¦³¤Ó¦hºØ±¡ªp»Ý­n¦Ò¼{¡A¦Ó§Ú¦³¤@¨Ç±¡ªp¨S¦³¦Ò¼{¨ì¡A©Ò¥H¾É­P<span
+class=GramE>¦h®ø½u©Î¤Ö®ø½u</span>ªº±¡§Îµo¥Í¡A¦ýÃª©ó®É¶¡¤£¨¬¡A©Ò¥H¨S¦³±N³o³¡¤À³B²z¦n¡A¬O§Ú»Ý­n§ï¶iªº¦a¤è¡A»Ý­n¦A´ú¸Õ¤@¨Ç<span
+lang=EN-US>case</span>¡AµM«á¶i¦æ<span lang=EN-US>debug</span>¡A¤~¯à±N³o³¡¤À§ï¦n¡C<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='mso-bidi-font-size:
+12.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>³o¬O§Ú¤Ö¼Æ¼g±Nªñ<span
+lang=EN-US>1000</span>¦æµ{¦¡½Xªº¸gÅç¤§¤@¡A¦Ó¥¼¨Ó¤]¶Õ¥²·|¹J¨ì¶V¨Ó¶V¦h»Ý­n¼g¤j¶qµ{¦¡½Xªº±¡§Î¡A³z¹L³o¦¸<span lang=EN-US>term
+project</span>¡AÅý§Ú¦³¤£¤Ö¦¬Ã¬¡A¤]²Ö¿n¤F¤@¨Ç¸gÅç¡C<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='line-height:150%'><b><span style='font-size:26.0pt;
+line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>ªþ¿ý<span lang=EN-US><o:p></o:p></span></span></b></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+14.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'><a
+href="https://drive.google.com/file/d/1aezy5qnucUoZHWEZUnAQKABnTBDXo0Jc/view?usp=sharing"><span
+lang=EN-US><span lang=EN-US>µ{¦¡­ì©l½X<o:p></o:p></span></span></a></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US><a
+href="https://drive.google.com/file/d/1SQ5y80Y-FMJWV5E1QNIcplNp2XPcYa_f/view?usp=sharing"><span
+lang=EN-US style='font-size:14.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'><span
+lang=EN-US>´ú¸Õ¿é¤JÀÉ</span></span></a></span><span lang=EN-US style='font-size:
+14.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='line-height:150%'><a name="_Hlk152721140"></a><a
+href="https://drive.google.com/file/d/16r1wbfjU7M1BkHssmfB7D7dXcNHZ0fw4/view?usp=sharing"><span
+style='mso-bookmark:_Hlk152721140'><span style='font-size:14.0pt;line-height:
+150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'>´ú¸Õ¿é¥XÀÉ</span></span><span style='mso-bookmark:
+_Hlk152721140'></span></a><span style='mso-bookmark:_Hlk152721140'><span
+lang=EN-US style='font-size:14.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'><o:p></o:p></span></span></p>
+
+<span style='mso-bookmark:_Hlk152721140'></span>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+14.0pt;line-height:150%;font-family:"·L³n¥¿¶ÂÅé",sans-serif'><o:p>&nbsp;</o:p></span></p>
+
+</div>
+
+</body>
+
+</html>
