@@ -1,4 +1,5 @@
 ﻿# Voronoi Diagram
+Voronoi Diagram 是一種計算幾何中的劃分方法，它會根據一組已知的點，將平面劃分為多個區域。每個區域內的所有點，與其對應的點之間的距離都比其他點更近。
 
 ## 輸出與輸入（資料）規格
 
@@ -35,7 +36,7 @@
 - Save: 輸出檔案
 
 ## 安裝說明
-下載[Voronoi.exe]([https://github.com/wenyu8020/DiaryAPP/releases](https://drive.google.com/file/d/1sU_OxxbmK34CeqRf2QVOF5RD5NA0R3ZN/view?usp=sharing))後並執行即可根據以下步驟操作。
+下載 [Voronoi.exe](https://drive.google.com/file/d/1sU_OxxbmK34CeqRf2QVOF5RD5NA0R3ZN/view?usp=sharing) 後並執行即可根據以下步驟操作。
 
 ## 執行步驟
 ### 繪製點座標
@@ -74,3 +75,4 @@
 
 <img src="https://github.com/wenyu8020/VoronoiDiagram/blob/main/M123040016_webpage/Voronoi%20Diagram.files/image039.png">
 <img src="https://github.com/wenyu8020/VoronoiDiagram/blob/main/M123040016_webpage/Voronoi%20Diagram.files/image041.png">
+
